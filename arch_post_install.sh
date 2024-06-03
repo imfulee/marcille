@@ -24,6 +24,7 @@ arch_packages=(
 	"fwupd"
 	"fzf"
 	"git"
+	"lazygit"
 	"libreoffice-fresh"
 	"make"
 	"neovim"
