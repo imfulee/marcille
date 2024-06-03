@@ -93,4 +93,4 @@ is_work_machine = true
 EOT
 
 # change shell to zsh
-sudo chsh -s $(which zsh)
+chsh -s $(which zsh)
