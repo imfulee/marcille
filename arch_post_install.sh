@@ -9,7 +9,7 @@ arch_packages=(
 	"flatpak"
 	"yay"
 	# input methods
-	"fcitx5"
+	"fcitx5-im"
 	"fcitx5-chinese-addons"
 	# containers
 	"docker"
