@@ -56,7 +56,7 @@ arch_packages=(
 
 aur_packages=(
 	"visual-studio-code-bin"
-	"fnm"
+	"fnm-bin"
 	"slack-desktop"
 	"brave-bin"
 	"noto-fonts-sc"
