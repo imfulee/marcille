@@ -21,7 +21,6 @@ arch_packages=(
 	"btop"
 	"cmake"
 	"chezmoi"
-	"fnm"
 	"fwupd"
 	"fzf"
 	"git"
@@ -57,6 +56,7 @@ arch_packages=(
 
 aur_packages=(
 	"visual-studio-code-bin"
+	"fnm"
 	"slack-desktop"
 	"brave-bin"
 	"noto-fonts-sc"
