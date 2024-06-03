@@ -77,6 +77,9 @@ sudo pacman -Syu $(join " " ${arch_packages[@]})
 yay -Syu $(join " " ${aur_packages[@]})
 flatpak install -y flathub $(join " " ${flatpak_packages[@]})
 
+# install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # create work and personal project directories
 mkdir -p $HOME/{work,personal}
 
