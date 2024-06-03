@@ -74,7 +74,7 @@ flatpak_packages=(
 
 # install packages
 sudo pacman -Syu $(join " " ${arch_packages[@]})
-sudo yay -Syu $(join " " ${aur_packages[@]})
+yay -Syu $(join " " ${aur_packages[@]})
 flatpak install -y flathub $(join " " ${flatpak_packages[@]})
 
 # create work and personal project directories
