@@ -37,6 +37,8 @@ arch_packages=(
 	"wget"
 	"zip"
 	"zsh"
+	# programming
+	"go"
 	# gui applications
 	"bitwarden"
 	"gparted"
