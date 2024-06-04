@@ -20,8 +20,9 @@ arch_packages=(
 	# tools
 	"alacritty"
 	"btop"
-	"cmake"
 	"chezmoi"
+	"cmake"
+	"curlie"
 	"fwupd"
 	"fzf"
 	"git"
