@@ -31,7 +31,7 @@ arch_packages=(
 	"net-tools"
 	"pandoc"
 	"pyenv"
-	"speedtest-cli
+	"speedtest-cli"
 	"stow"
 	"tmux"
 	"wget"
