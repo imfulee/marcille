@@ -26,6 +26,7 @@ arch_packages=(
 	"fwupd"
 	"fzf"
 	"git"
+	"k9s"
 	"lazygit"
 	"libreoffice-fresh"
 	"make"
