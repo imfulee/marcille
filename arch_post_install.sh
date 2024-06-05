@@ -105,3 +105,7 @@ EOT
 
 # change shell to zsh
 chsh -s $(which zsh)
+
+# start services
+sudo systemctl enable docker
+sudo systemctl start docker 
