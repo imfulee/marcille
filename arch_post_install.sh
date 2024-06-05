@@ -13,6 +13,7 @@ arch_packages=(
 	"fcitx5-chinese-addons"
 	# containers
 	"docker"
+	"docker-compose"
 	"podman"
 	"podman-compose"
 	# wayland
