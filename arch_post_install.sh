@@ -69,6 +69,7 @@ aur_packages=(
 	"brave-bin"
 	"noto-fonts-sc"
 	"noto-fonts-tc"
+	"virtualbox-ext-oracle"
 	"zsh-antidote"
 )
 
@@ -111,3 +112,6 @@ sudo systemctl enable docker
 sudo systemctl start docker 
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+# virtual box enable usb passthrough
+sudo usermod -aG vboxusers $USER
