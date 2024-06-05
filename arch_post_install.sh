@@ -91,7 +91,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # create work and personal project directories
 work_dir=$HOME/work
 personal_dir=$HOME/personal
-mkdir -p $work_dir $personal_dir
+container_dir=$HOME/container
+mkdir -p $work_dir $personal_dir $container_dir
 
 # create chezmoi config
 chezmoi_dir=$HOME/.config/chezmoi
