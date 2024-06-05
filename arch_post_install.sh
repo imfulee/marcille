@@ -109,4 +109,5 @@ chsh -s $(which zsh)
 # docker
 sudo systemctl enable docker
 sudo systemctl start docker 
+sudo groupadd docker
 sudo usermod -aG docker $USER
