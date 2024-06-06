@@ -38,6 +38,7 @@ arch_packages=(
 	"speedtest-cli"
 	"stow"
 	"tmux"
+	"tree"
 	"wget"
 	"zip"
 	"zsh"
