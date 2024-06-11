@@ -72,6 +72,7 @@ aur_packages=(
 	"fnm-bin"
 	"slack-desktop"
 	"brave-bin"
+	"mongodb-compass"
 	"noto-fonts-sc"
 	"noto-fonts-tc"
 	"virtualbox-ext-oracle"
@@ -81,7 +82,6 @@ aur_packages=(
 flatpak_packages=(
 	"com.spotify.Client"
 	"com.obsproject.Studio"
-	"com.mongodb.Compass"
 	"io.dbeaver.DBeaverCommunity"
 	"com.logseq.Logseq"
 )
