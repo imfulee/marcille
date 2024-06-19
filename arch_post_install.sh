@@ -4,6 +4,12 @@ function join {
 	echo "$*"
 }
 
+documents_dir=$HOME/Documents
+if [[ ! -d $documents_dir ]]; then
+	documents_dir=$HOME/documents
+	mkdir -p $documents_dir
+fi
+
 arch_packages=(
 	# package managers
 	"flatpak"
@@ -114,9 +120,12 @@ chsh -s $(which zsh)
 
 # docker
 sudo systemctl enable docker
-sudo systemctl start docker 
+sudo systemctl start docker
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
-# virtual box enable usb passthrough
-sudo usermod -aG vboxusers $USER
+# virtual box
+sudo usermod -aG vboxusers $USER         # enable usb passthrough
+virtualbox_dir=$documents_dir/VirtualBox # make virtual box directory
+mkdir -p $virtualbox_dir
+vboxmanage setproperty machinefolder $virtualbox_dir
