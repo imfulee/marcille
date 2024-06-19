@@ -89,7 +89,6 @@ flatpak_packages=(
 	"com.spotify.Client"
 	"com.obsproject.Studio"
 	"io.dbeaver.DBeaverCommunity"
-	"com.logseq.Logseq"
 )
 
 # install packages
