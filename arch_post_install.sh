@@ -51,6 +51,7 @@ arch_packages=(
 	"tree"
 	"unzip"
 	"wget"
+	"zellij"
 	"zip"
 	"zsh"
 	# programming
