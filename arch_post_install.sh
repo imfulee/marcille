@@ -30,6 +30,7 @@ arch_packages=(
 	"chezmoi"
 	"cmake"
 	"curlie"
+	"diff-so-fancy"
 	"fd"
 	"fwupd"
 	"fzf"
