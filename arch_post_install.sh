@@ -36,6 +36,7 @@ arch_packages=(
 	"fzf"
 	"gcc"
 	"git"
+	"jq"
 	"k9s"
 	"lazygit"
 	"libreoffice-fresh"
