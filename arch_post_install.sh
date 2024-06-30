@@ -1,10 +1,22 @@
+is_arch=false
+is_endeavouros=false
+os_name=$(grep -E "^(NAME)=" /etc/os-release | awk -F = '{ print $2 }' | sed 's/"//g')
+documents_dir=$HOME/Documents
+
+if ! command -v pacman &>/dev/null; then
+	is_arch=true
+fi
+
+if [ "$os_name" == "EndeavourOS" ]; then
+	is_endeavouros=true
+fi
+
 function join {
 	local IFS="$1"
 	shift
 	echo "$*"
 }
 
-documents_dir=$HOME/Documents
 if [[ ! -d $documents_dir ]]; then
 	documents_dir=$HOME/documents
 	mkdir -p $documents_dir
@@ -13,7 +25,6 @@ fi
 arch_packages=(
 	# package managers
 	"flatpak"
-	"yay"
 	# input methods
 	"fcitx5-im"
 	"fcitx5-chinese-addons"
@@ -74,6 +85,25 @@ arch_packages=(
 	# system
 	"linux-zen"
 )
+
+if is_arch; then
+	if is_endeavouros; then
+		arch_packages+=(
+			# package manager
+			"yay"
+		)
+	else
+		sudo pacman -S --needed git base-devel
+		git clone https://aur.archlinux.org/yay.git
+		cd yay
+		makepkg -si
+		cd $HOME
+		rm -rf yay
+	fi
+else
+	# if not arch then exit
+	exit 0
+fi
 
 aur_packages=(
 	"visual-studio-code-bin"
