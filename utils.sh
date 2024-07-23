@@ -8,10 +8,17 @@ get_proton_ge() {
 
     local proton_ge_version=$1
 
-    mkdir -p $steam_compatibility_directory && cd $steam_compatibility_directory
-    # Football Manager seems to work well with this version
-    wget https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton$proton_ge_version/GE-Proton$proton_ge_version.tar.gz
-    tar zxvf GE-Proton$proton_ge_version.tar.gz && rm GE-Proton$proton_ge_version.tar.gz
+  echo "[download proton ge]"
+  mkdir -p $steam_compatibility_directory
+  wget "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton$proton_ge_version/GE-Proton$proton_ge_version.tar.gz" \
+    -P $steam_compatibility_directory \
+    --no-verbose --show-progress
+
+  local tar_file=$steam_compatibility_directory/GE-Proton$proton_ge_version.tar.gz
+
+  echo "[extract file]"
+  pv $tar_file | tar xzf - -C $steam_compatibility_directory
+  rm $tar_file
 }
 
 rm_proton_ge() {
