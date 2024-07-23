@@ -8,7 +8,6 @@ get_proton_ge() {
 
     local proton_ge_version=$1
 
-    steam_compatibility_directory=$HOME/.steam/root/compatibilitytools.d
     mkdir -p $steam_compatibility_directory && cd $steam_compatibility_directory
     # Football Manager seems to work well with this version
     wget https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton$proton_ge_version/GE-Proton$proton_ge_version.tar.gz
