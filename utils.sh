@@ -6,7 +6,7 @@ get_proton_ge() {
     return 5
   fi
 
-    local proton_ge_version=$1
+  local proton_ge_version=$1
 
   echo "[download proton ge]"
   mkdir -p $steam_compatibility_directory
@@ -27,7 +27,7 @@ rm_proton_ge() {
     return 5
   fi
 
-    local proton_ge_version=$1
-    local to_delete_directory=$steam_compatibility_directory/GE-Proton$proton_ge_version
-    [[ -d $to_delete_directory ]] && rm -rf $to_delete_directory
+  local proton_ge_version=$1
+  local to_delete_directory=$steam_compatibility_directory/GE-Proton$proton_ge_version
+  [[ -d $to_delete_directory ]] && rm -rf $to_delete_directory
 }
