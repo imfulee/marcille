@@ -1,3 +1,6 @@
+[[ -f ./utils.sh ]] && source ./utils.sh
+
+is_personal_machine=true
 is_arch=false
 is_endeavouros=false
 os_name=$(grep -E "^(NAME)=" /etc/os-release | awk -F = '{ print $2 }' | sed 's/"//g')
@@ -103,6 +106,11 @@ else
   exit 0
 fi
 
+if is_personal_machine; then
+  arch_packages+=(
+    # apps
+    steam
+  )
 fi
 
 aur_packages=(
@@ -124,10 +132,17 @@ flatpak_packages=(
   "io.dbeaver.DBeaverCommunity"
 )
 
-# install packages
-sudo pacman -Syu $(join " " ${arch_packages[@]})
-yay -Syu $(join " " ${aur_packages[@]})
-flatpak install -y flathub $(join " " ${flatpak_packages[@]})
+if $is_arch; then
+  # install packages
+  sudo pacman -Syu $(join " " ${arch_packages[@]})
+  yay -Syu $(join " " ${aur_packages[@]})
+fi
+
+if $is_personal_machine; then
+  if [[ -f ./utils.sh ]]; then
+    get_proton_ge 8-3
+  fi
+fi
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
