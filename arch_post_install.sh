@@ -115,6 +115,7 @@ aur_packages=(
 	"noto-fonts-tc"
 	"virtualbox-ext-oracle"
 	"zsh-antidote"
+  "tmux-plugin-manager"
 )
 
 flatpak_packages=(
