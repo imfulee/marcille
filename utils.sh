@@ -1,10 +1,10 @@
 steam_compatibility_directory=$HOME/.steam/root/compatibilitytools.d
 
 get_proton_ge() {
-    if [ -z "$1" ]; then
-        echo "usage: get_proton_ge VERSION"
-        return 0
-    fi
+  if [ -z "$1" ]; then
+    echo "usage: get_proton_ge VERSION"
+    return 5
+  fi
 
     local proton_ge_version=$1
 
@@ -16,10 +16,10 @@ get_proton_ge() {
 }
 
 rm_proton_ge() {
-    if [ -z "$1" ]; then
-        echo "usage: rm_proton_ge VERSION"
-        return 0
-    fi
+  if [ -z "$1" ]; then
+    echo "usage: rm_proton_ge VERSION"
+    return 5
+  fi
 
     local proton_ge_version=$1
     local to_delete_directory=$steam_compatibility_directory/GE-Proton$proton_ge_version
