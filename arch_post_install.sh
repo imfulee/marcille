@@ -34,8 +34,6 @@ arch_packages=(
   # containers
   "docker"
   "docker-compose"
-  "podman"
-  "podman-compose"
   # wayland
   "wl-clipboard"
   # tools
