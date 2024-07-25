@@ -6,7 +6,7 @@ is_endeavouros=false
 os_name=$(grep -E "^(NAME)=" /etc/os-release | awk -F = '{ print $2 }' | sed 's/"//g')
 documents_dir=$HOME/Documents
 
-if ! command -v pacman &>/dev/null; then
+if command -v pacman &>/dev/null; then
   is_arch=true
 fi
 
