@@ -84,8 +84,8 @@ arch_packages=(
   "noto-fonts-extra"
 )
 
-if is_arch; then
-  if is_endeavouros; then
+if $is_arch; then
+  if $is_endeavouros; then
     arch_packages+=(
       # package manager
       "yay"
@@ -103,7 +103,7 @@ else
   exit 0
 fi
 
-if is_personal_machine; then
+if $is_personal_machine; then
   arch_packages+=(
     # apps
     steam
