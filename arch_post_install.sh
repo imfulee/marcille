@@ -72,7 +72,6 @@ arch_packages=(
   "bitwarden"
   "gparted"
   "gthumb"
-  "gnome-boxes"
   "thunderbird"
   "transmission-qt"
   "virtualbox"
