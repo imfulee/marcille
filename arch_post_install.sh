@@ -121,6 +121,7 @@ aur_packages=(
   "virtualbox-ext-oracle"
   "zsh-antidote"
   "tmux-plugin-manager"
+  "rate-mirrors-bin"
 )
 
 flatpak_packages=(
