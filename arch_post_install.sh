@@ -158,6 +158,7 @@ touch $chezmoi_dir/chezmoi.toml
 tee -a $chezmoi_dir/chezmoi.toml >/dev/null <<EOT
 [data.environment]
 is_work_machine = true
+desktop_environment = "KDE_Plasma"
 EOT
 
 # change shell to zsh
