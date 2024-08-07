@@ -136,6 +136,10 @@ if $is_arch; then
   yay -Syu $(join " " ${aur_packages[@]})
 fi
 
+if command -v flatpak &>/dev/null; then
+  flatpak install -y $(join " " ${flatpak_packages[@]})
+fi
+
 if $is_personal_machine; then
   if [[ -f ./utils.sh ]]; then
     get_proton_ge 8-3
