@@ -89,17 +89,18 @@ if $is_personal_machine; then
 fi
 
 aur_packages=(
-  "visual-studio-code-bin"
-  "fnm-bin"
-  "slack-desktop"
+  "apachedirectorystudio"
   "brave-bin"
+  "fnm-bin"
   "mongodb-compass"
   "noto-fonts-sc"
   "noto-fonts-tc"
+  "rate-mirrors-bin"
+  "slack-desktop"
+  "tmux-plugin-manager"
+  "visual-studio-code-bin"
   "virtualbox-ext-oracle"
   "zsh-antidote"
-  "tmux-plugin-manager"
-  "rate-mirrors-bin"
 )
 
 flatpak_packages=(
