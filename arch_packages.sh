@@ -1,5 +1,9 @@
 source config.sh
 
+if ! $is_arch; then
+  exit 1
+fi
+
 arch_packages=(
   # package managers
   "flatpak"
@@ -58,10 +62,6 @@ arch_packages=(
   "noto-fonts-emoji"
   "noto-fonts-extra"
 )
-
-if ! $is_arch; then
-  exit 0
-fi
 
 if $is_endeavouros; then
   arch_packages+=(
