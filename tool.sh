@@ -4,7 +4,7 @@ source config.sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # create chezmoi config
-chezmoi_dir=$HOME/.config/chezmoi
+chezmoi_dir="$xdg_config_dir/chezmoi"
 mkdir -p "$chezmoi_dir"
 touch "$chezmoi_dir/chezmoi.toml"
 tee -a "$chezmoi_dir/chezmoi.toml" >/dev/null <<EOT
