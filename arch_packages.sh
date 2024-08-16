@@ -1,5 +1,4 @@
 source config.sh
-source utils.sh
 
 arch_packages=(
   # package managers
@@ -111,10 +110,10 @@ flatpak_packages=(
 
 if $is_arch; then
   # install packages
-  sudo pacman -Syu $(join " " ${arch_packages[@]})
-  yay -Syu $(join " " ${aur_packages[@]})
+  sudo pacman -Syu "${arch_packages[@]}"
+  yay -Syu "${aur_packages[@]}"
 fi
 
 if command -v flatpak &>/dev/null; then
-  flatpak install -y $(join " " ${flatpak_packages[@]})
+  flatpak install -y "${flatpak_packages[@]}"
 fi
