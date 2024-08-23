@@ -63,6 +63,27 @@ arch_packages=(
   "noto-fonts-extra"
 )
 
+aur_packages=(
+  "apachedirectorystudio"
+  "brave-bin"
+  "fnm-bin"
+  "mongodb-compass"
+  "noto-fonts-sc"
+  "noto-fonts-tc"
+  "rate-mirrors-bin"
+  "slack-desktop"
+  "tmux-plugin-manager"
+  "visual-studio-code-bin"
+  "virtualbox-ext-oracle"
+  "zsh-antidote"
+)
+
+flatpak_packages=(
+  "com.spotify.Client"
+  "com.obsproject.Studio"
+  "io.dbeaver.DBeaverCommunity"
+)
+
 if $is_endeavouros; then
   arch_packages+=(
     # package manager
@@ -88,32 +109,9 @@ if $is_personal_machine; then
   )
 fi
 
-aur_packages=(
-  "apachedirectorystudio"
-  "brave-bin"
-  "fnm-bin"
-  "mongodb-compass"
-  "noto-fonts-sc"
-  "noto-fonts-tc"
-  "rate-mirrors-bin"
-  "slack-desktop"
-  "tmux-plugin-manager"
-  "visual-studio-code-bin"
-  "virtualbox-ext-oracle"
-  "zsh-antidote"
-)
-
-flatpak_packages=(
-  "com.spotify.Client"
-  "com.obsproject.Studio"
-  "io.dbeaver.DBeaverCommunity"
-)
-
-if $is_arch; then
-  # install packages
-  sudo pacman -Syu "${arch_packages[@]}"
-  yay -Syu "${aur_packages[@]}"
-fi
+# install packages
+sudo pacman -Syu "${arch_packages[@]}"
+yay -Syu "${aur_packages[@]}"
 
 if command -v flatpak &>/dev/null; then
   flatpak install -y "${flatpak_packages[@]}"
