@@ -39,10 +39,10 @@ arch_packages=(
   "ripgrep"
   "speedtest-cli"
   "stow"
+  "tmux"
   "tree"
   "unzip"
   "wget"
-  "zellij"
   "zip"
   "zsh"
   # programming
