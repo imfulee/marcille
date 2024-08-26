@@ -20,4 +20,5 @@ if [ "$os_name" == "EndeavourOS" ]; then
   is_endeavouros=true
 fi
 
+# use env to override config values
 [[ -f .env ]] && source .env
