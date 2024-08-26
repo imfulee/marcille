@@ -82,6 +82,7 @@ flatpak_packages=(
   "com.spotify.Client"
   "com.obsproject.Studio"
   "io.dbeaver.DBeaverCommunity"
+  "com.github.flxzt.rnote"
 )
 
 if $is_endeavouros; then
