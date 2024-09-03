@@ -48,6 +48,7 @@ arch_packages=(
   "zsh"
   # programming
   "go"
+  "just"
   # gui applications
   "bitwarden"
   "gparted"
