@@ -36,7 +36,6 @@ arch_packages=(
   "neovim"
   "net-tools"
   "pandoc"
-  "pyenv"
   "ripgrep"
   "speedtest-cli"
   "stow"
@@ -49,6 +48,7 @@ arch_packages=(
   # programming
   "go"
   "just"
+  "pyenv"
   # gui applications
   "bitwarden"
   "gparted"
