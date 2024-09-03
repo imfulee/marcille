@@ -13,6 +13,7 @@ arch_packages=(
   # containers
   "docker"
   "docker-compose"
+  "docker-buildx"
   # wayland
   "wl-clipboard"
   # tools
