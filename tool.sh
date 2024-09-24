@@ -27,3 +27,6 @@ sudo usermod -aG vboxusers "$USER"       # enable usb passthrough
 virtualbox_dir=$documents_dir/VirtualBox # make virtual box directory
 mkdir -p "$virtualbox_dir"
 vboxmanage setproperty machinefolder "$virtualbox_dir"
+
+# pdm
+pdm config check_update false

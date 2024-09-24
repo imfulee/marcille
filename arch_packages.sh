@@ -49,6 +49,7 @@ arch_packages=(
   "go"
   "just"
   "pyenv"
+  "python-pdm"
   # gui applications
   "bitwarden"
   "gparted"
