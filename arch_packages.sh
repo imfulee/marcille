@@ -48,6 +48,7 @@ arch_packages=(
   # programming
   "go"
   "just"
+  "marksman" # markdown lsp - used for kate
   "pyenv"
   "python-pdm"
   # gui applications
