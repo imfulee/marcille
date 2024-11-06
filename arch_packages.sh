@@ -33,6 +33,7 @@ arch_packages=(
   "lazygit"
   "libreoffice-fresh"
   "make"
+  "minio-client"
   "neovim"
   "net-tools"
   "pandoc"
