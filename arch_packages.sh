@@ -117,8 +117,8 @@ if $is_personal_machine; then
 fi
 
 # install packages
-sudo pacman -Syu "${arch_packages[@]}"
-yay -Syu "${aur_packages[@]}"
+sudo pacman -Syu --needed "${arch_packages[@]}"
+yay -Syu --needed "${aur_packages[@]}"
 
 if command -v flatpak &>/dev/null; then
   flatpak install -y "${flatpak_packages[@]}"
