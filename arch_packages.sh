@@ -121,5 +121,5 @@ sudo pacman -Syu --needed "${arch_packages[@]}"
 yay -Syu --needed "${aur_packages[@]}"
 
 if command -v flatpak &>/dev/null; then
-  flatpak install -y "${flatpak_packages[@]}"
+  flatpak install --user -y "${flatpak_packages[@]}"
 fi
