@@ -23,8 +23,8 @@ sudo groupadd docker
 sudo usermod -aG docker "$USER"
 
 # virtual box
-sudo usermod -aG vboxusers "$USER"       # enable usb passthrough
-virtualbox_dir=$documents_dir/VirtualBox # make virtual box directory
+sudo usermod -aG vboxusers "$USER"           # enable usb passthrough
+virtualbox_dir=$HOME/.local/share/virtualbox # make virtual box directory
 mkdir -p "$virtualbox_dir"
 vboxmanage setproperty machinefolder "$virtualbox_dir"
 
