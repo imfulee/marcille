@@ -7,7 +7,11 @@ Scripts that I would find useful. I named it after Marcille in the show Dungeon 
 ## Usage
 
 ```bash
-bash exec.sh 
+bash exec.sh
 ```
 
 `.env` could be used to override `config.sh`
+
+## Manual steps
+
+- Firefox: change `apz.gtk.kinetic_scroll.enabled` to false to stop scrolling from continue scrolling after finger leaves touchpad
