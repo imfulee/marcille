@@ -17,6 +17,7 @@ arch_packages=(
   # wayland
   "wl-clipboard"
   # tools
+  "7zip"
   "alacritty"
   "btop"
   "chezmoi"
