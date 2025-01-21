@@ -5,6 +5,9 @@ if ! $is_arch; then
 fi
 
 arch_packages=(
+  # kernel 
+  "linux"
+  "linux-lts"
   # package managers
   "flatpak"
   # input methods
