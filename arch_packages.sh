@@ -82,7 +82,6 @@ aur_packages=(
   "slack-desktop"
   "tmux-plugin-manager"
   "visual-studio-code-bin"
-  "virtualbox-ext-oracle"
   "zsh-antidote"
 )
 
