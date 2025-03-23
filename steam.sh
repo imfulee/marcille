@@ -35,5 +35,5 @@ rm_proton_ge() {
 }
 
 if $is_personal_machine; then
-  get_proton_ge 8-3
+  get_proton_ge 9-26
 fi
