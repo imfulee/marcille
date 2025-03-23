@@ -11,6 +11,7 @@ export work_dir=$HOME/work
 export personal_dir=$HOME/personal
 export container_dir=$HOME/container
 export xdg_config_dir=$HOME/.config
+export virtual_machine_dir=$HOME/virtual_machines
 
 if command -v pacman &>/dev/null; then
   is_arch=true
