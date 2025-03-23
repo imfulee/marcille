@@ -5,7 +5,7 @@ if ! $is_arch; then
 fi
 
 arch_packages=(
-  # kernel 
+  # kernel
   "linux"
   "linux-lts"
   # package managers
@@ -54,8 +54,7 @@ arch_packages=(
   "go"
   "just"
   "marksman"
-  "pyenv"
-  "python-pdm"
+  "uv"
   # gui applications
   "bitwarden"
   "gparted"
