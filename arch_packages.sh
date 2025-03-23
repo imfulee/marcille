@@ -90,7 +90,6 @@ flatpak_packages=(
   "com.obsproject.Studio"
   "io.dbeaver.DBeaverCommunity"
   "com.github.flxzt.rnote"
-  "com.getpostman.Postman"
 )
 
 if $is_endeavouros; then
