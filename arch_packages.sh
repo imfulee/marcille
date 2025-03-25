@@ -74,6 +74,7 @@ arch_packages=(
 aur_packages=(
   "apachedirectorystudio"
   "brave-bin"
+  "dops-bin" # fancy docker ps
   "fnm-bin"
   "mongodb-compass"
   "noto-fonts-sc"
