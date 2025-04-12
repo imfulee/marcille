@@ -63,6 +63,8 @@ arch_packages=(
   "transmission-qt"
   "virtualbox"
   "virtualbox-guest-iso"
+  "virtualbox-host-modules-arch"
+  "virtualbox-host-modules-lts"
   # fonts
   "nerd-fonts"
   "noto-fonts"
