@@ -78,7 +78,6 @@ aur_packages=(
   "brave-bin"
   "dops-bin" # fancy docker ps
   "fnm-bin"
-  "mongodb-compass"
   "noto-fonts-sc"
   "noto-fonts-tc"
   "rate-mirrors-bin"
@@ -93,6 +92,7 @@ flatpak_packages=(
   "com.obsproject.Studio"
   "io.dbeaver.DBeaverCommunity"
   "com.github.flxzt.rnote"
+  "com.mongodb.Compass"
 )
 
 if $is_endeavouros; then
