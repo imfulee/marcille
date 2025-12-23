@@ -97,9 +97,7 @@ aur_packages=(
   "fnm-bin"
   "noto-fonts-sc"
   "noto-fonts-tc"
-  "rate-mirrors-bin"
   "slack-desktop"
-  "tmux-plugin-manager"
   "visual-studio-code-bin"
   "zsh-antidote"
 
