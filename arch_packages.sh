@@ -1,5 +1,4 @@
 #!/bin/bash
-set -xeuo pipefail
 
 arch_packages=(
   # kernel
