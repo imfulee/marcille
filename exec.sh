@@ -1,9 +1,8 @@
 #!/bin/bash
-set -x
-set -e
+set -xeuo pipefail
 
-bash arch_packages.sh || exit
+[[ -f arch_packages.sh ]] && bash arch_packages.sh || exit
+[[ -f base_setup.sh ]] && bash base_setup.sh
 [[ -f security.sh ]] && bash security.sh
-bash directory.sh
 bash tool.sh
 bash steam.sh

@@ -1,4 +1,6 @@
-source config.sh
+#!/bin/bash
+xdg_config_dir=$HOME/.config
+virtual_machine_dir=$HOME/virtual_machines
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -12,9 +14,6 @@ tee -a "$chezmoi_dir/chezmoi.toml" >/dev/null <<EOT
 is_work_machine = true
 desktop_environment = "KDE_Plasma"
 EOT
-
-# change shell to zsh
-chsh -s "$(which zsh)"
 
 # docker
 sudo systemctl enable docker
