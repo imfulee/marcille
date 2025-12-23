@@ -1,3 +1,6 @@
+#!/bin/bash
+set -xeuo pipefail
+
 source config.sh
 
 if ! $is_arch; then
@@ -8,34 +11,41 @@ arch_packages=(
   # kernel
   "linux"
   "linux-lts"
+
   # package managers
   "flatpak"
+
   # input methods
   "fcitx5-im"
   "fcitx5-chinese-addons"
+
   # containers
   "docker"
   "docker-compose"
   "docker-buildx"
+
   # wayland
   "wl-clipboard"
-  # tools
-  "7zip"
-  "alacritty"
+
+  # system
   "btop"
   "chezmoi"
+  "fwupd"
+  "ufw"
+  "zsh"
+
+  # tools
+  "7zip"
   "cmake"
   "curlie"
   "diff-so-fancy"
   "fd"
-  "fwupd"
   "fzf"
   "gcc"
   "git"
   "jq"
   "k9s"
   "lazygit"
-  "libreoffice-fresh"
   "make"
   "minio-client"
   "neovim"
@@ -48,23 +58,30 @@ arch_packages=(
   "tree"
   "unzip"
   "wget"
+  "yazi"
   "zip"
-  "zsh"
+
   # programming
   "go"
   "just"
   "marksman"
   "uv"
+
   # gui applications
+  "alacritty"
   "bitwarden"
   "gparted"
   "gthumb"
+  "libreoffice-fresh"
   "thunderbird"
   "transmission-qt"
   "virtualbox"
   "virtualbox-guest-iso"
   "virtualbox-host-modules-arch"
   "virtualbox-host-modules-lts"
+  "vlc"
+  "vlc-plugins-all"
+
   # fonts
   "nerd-fonts"
   "noto-fonts"
@@ -85,6 +102,9 @@ aur_packages=(
   "tmux-plugin-manager"
   "visual-studio-code-bin"
   "zsh-antidote"
+
+  # android development
+  "android-studio"
 )
 
 flatpak_packages=(
@@ -121,8 +141,8 @@ if $is_personal_machine; then
 fi
 
 # install packages
-sudo pacman -Syu --needed "${arch_packages[@]}"
-yay -Syu --needed "${aur_packages[@]}"
+sudo pacman -Syu --needed --noconfirm "${arch_packages[@]}"
+yay -Syu --needed --noconfirm "${aur_packages[@]}"
 
 if command -v flatpak &>/dev/null; then
   flatpak install --user -y "${flatpak_packages[@]}"
