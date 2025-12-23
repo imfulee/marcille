@@ -1,12 +1,6 @@
 #!/bin/bash
 set -xeuo pipefail
 
-source config.sh
-
-if ! $is_arch; then
-  exit 1
-fi
-
 arch_packages=(
   # kernel
   "linux"
@@ -36,6 +30,7 @@ arch_packages=(
 
   # tools
   "7zip"
+  "base-devel"
   "cmake"
   "curlie"
   "diff-so-fancy"
@@ -73,6 +68,7 @@ arch_packages=(
   "gparted"
   "gthumb"
   "libreoffice-fresh"
+  "steam"
   "thunderbird"
   "transmission-qt"
   "virtualbox"
@@ -113,35 +109,21 @@ flatpak_packages=(
   "com.mongodb.Compass"
 )
 
-if $is_endeavouros; then
-  arch_packages+=(
-    # package manager
-    "yay"
-  )
-else
-  sudo pacman -S --needed git base-devel
-
-  yay_directory="/tmp/yay"
+install_yay() {
+  local cwd
+  cwd="$(pwd)"
+  local yay_directory="/tmp/yay"
   git clone https://aur.archlinux.org/yay.git "$yay_directory"
 
   cd "$yay_directory" || exit
   makepkg -si
 
-  cd "$HOME" || exit
+  cd "$cwd" || exit
   rm -rf "$yay_directory"
-fi
-
-if $is_personal_machine; then
-  arch_packages+=(
-    # apps
-    steam
-  )
-fi
+}
 
 # install packages
 sudo pacman -Syu --needed --noconfirm "${arch_packages[@]}"
+install_yay
 yay -Syu --needed --noconfirm "${aur_packages[@]}"
-
-if command -v flatpak &>/dev/null; then
-  flatpak install --user -y "${flatpak_packages[@]}"
-fi
+flatpak install --user -y "${flatpak_packages[@]}"
