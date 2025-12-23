@@ -109,15 +109,9 @@ flatpak_packages=(
 )
 
 install_yay() {
-  local cwd
-  cwd="$(pwd)"
   local yay_directory="/tmp/yay"
   git clone https://aur.archlinux.org/yay.git "$yay_directory"
-
-  cd "$yay_directory" || exit
-  makepkg -si
-
-  cd "$cwd" || exit
+  makepkg -si --dir "$yay_directory"
   rm -rf "$yay_directory"
 }
 
