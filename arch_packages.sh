@@ -3,8 +3,6 @@
 arch_packages=(
   # kernel
   "linux"
-  "linux-lts"
-
   # package managers
   "flatpak"
 
@@ -19,8 +17,8 @@ arch_packages=(
 
   # wayland
   "wl-clipboard"
-
-  # system
+  # tools
+  "7zip"
   "btop"
   "chezmoi"
   "fwupd"
@@ -48,7 +46,6 @@ arch_packages=(
   "ripgrep"
   "speedtest-cli"
   "stow"
-  "tmux"
   "tree"
   "unzip"
   "wget"
@@ -57,13 +54,12 @@ arch_packages=(
 
   # programming
   "go"
-  "just"
-  "marksman"
   "uv"
 
   # gui applications
   "alacritty"
   "bitwarden"
+  "ghostty"
   "gparted"
   "gthumb"
   "libreoffice-fresh"
@@ -73,16 +69,23 @@ arch_packages=(
   "virtualbox"
   "virtualbox-guest-iso"
   "virtualbox-host-modules-arch"
-  "virtualbox-host-modules-lts"
-  "vlc"
-  "vlc-plugins-all"
-
   # fonts
   "nerd-fonts"
   "noto-fonts"
   "noto-fonts-cjk"
   "noto-fonts-emoji"
   "noto-fonts-extra"
+  # flutter development 
+  # "llvm" 
+  # "clang"
+)
+
+optional_arch_packages=(
+  # "linux-lts"
+  # "virtualbox-host-modules-lts"
+  "marksman"
+  # "just"
+  # "tmux"
 )
 
 aur_packages=(
@@ -95,9 +98,11 @@ aur_packages=(
   "slack-desktop"
   "visual-studio-code-bin"
   "zsh-antidote"
+  "mullvad-vpn-bin"
+)
 
-  # android development
-  "android-studio"
+optional_aur_packages=(
+  # "tmux-plugin-manager"
 )
 
 flatpak_packages=(
@@ -106,6 +111,8 @@ flatpak_packages=(
   "io.dbeaver.DBeaverCommunity"
   "com.github.flxzt.rnote"
   "com.mongodb.Compass"
+  "io.ente.auth"
+  "org.localsend.localsend_app"
 )
 
 install_yay() {
